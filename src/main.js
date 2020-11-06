@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import * as  directives from '@/directives/index'
+Object.keys(directives).forEach(key=>Vue.directive(key,directives[key]));
 
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
